@@ -1,0 +1,34 @@
+[package]
+name = "mlb"
+version = "0.1.0"
+edition = "2021"
+authors = [
+    "Murilo Ijanc' <mbsd@m0x.ru>",
+]
+description = "Simple load balancer in Rust"
+readme = "README.md"
+keywords = ["loadbalance"]
+repository = "https://github.com/murilobsd/mlb"
+documentation = "https://docs.rs/mlb"
+categories = ["network-programming", "synchronous"]
+license = "ISC"
+exclude = [".gitignore", ".cargo/config", ".github/**", "codecov.yml"]
+
+[lib]
+name = "mlb"
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1.0.52"
+clap = "2.34.0"
+config = "0.11.0"
+hyper = { version = "0.14.16", features = ["full"] }
+log = "0.4.14"
+pretty_env_logger = "0.4.0"
+thiserror = "1.0.30"
+tokio = { version = "1.15.0", features = ["full"] }
+
+[[bin]]
+path = "bin/mlb.rs"
+name = "mlb"
+test = false
