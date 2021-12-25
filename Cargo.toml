@@ -29,6 +29,6 @@ thiserror = "1.0.30"
 tokio = { version = "1.15.0", features = ["full"] }
 
 [[bin]]
-path = "bin/mlb.rs"
-name = "mlb"
+path = "bin/mlbd.rs"
+name = "mlbd"
 test = false
